@@ -31,7 +31,6 @@ class CounterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //  so here the counter can access all the values from the class
-    final counter = Provider.of<Classquote>(context);
 
     //  also comsumer it's use to specify the widget that uses the provider to ensure that we change the
     //
@@ -40,6 +39,7 @@ class CounterWidget extends StatelessWidget {
       body: Center(
         child: Consumer<Classquote>(
           builder: (BuildContext context, Classquote value, Widget? child) {
+            // final counter = Provider.of<Classquote>(context);
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
